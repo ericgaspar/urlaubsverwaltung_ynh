@@ -42,8 +42,6 @@ ram.runtime = "50M"
     default = "/example"
 
     [install.init_main_permission]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
-    # This won't be saved as setting and will instead be used to initialize the SSOwat permission
     type = "group"
     default = "visitors"
 
@@ -55,12 +53,9 @@ ram.runtime = "50M"
     default = "fr"
 
     [install.admin]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
     type = "user"
 
     [install.password]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
-    # Note that user-provided passwords questions are not automatically saved as setting
     help.en = "Use the help field to add an information for the admin about this question."
     help.fr = "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
     type = "password"
@@ -80,22 +75,14 @@ ram.runtime = "50M"
     [resources.install_dir]
 
     [resources.data_dir]
-    # This will create/remove the data dir as /home/yunohost.app/$app
-    # and store the corresponding setting $data_dir
 
     [resources.permissions]
-    # This will configure SSOwat permission for $domain/$path/
-    # The initial allowed group of user is configured via the init_main_permission question (public=visitors, private=all_users)
     main.url = "/"
 
     [resources.ports]
-    # This will pick a random port for reverse-proxying and store it as the $port setting
 
     [resources.apt]
-    # This will automatically install/uninstall the following apt packages
-    # and implicitly define the $phpversion setting as 8.0 (if phpX.Y-foobar dependencies are listed)
-    packages = "mariadb-server, deb1, deb2, php8.3-foo, php8.3-bar"
+    packages = "openjdk-17-jre"
 
     [resources.database]
-    # This will automatically provision/deprovison a MySQL DB and store the corresponding credentials in settings $db_user, $db_name, $db_pwd
     type = "mysql"
