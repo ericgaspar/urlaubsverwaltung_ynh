@@ -82,7 +82,7 @@ ram.runtime = "50M"
     [resources.ports]
 
     [resources.apt]
-    packages = "openjdk-17-jre"
+    packages = "postgresql, openjdk-21-jre"
 
     [resources.database]
-    type = "mysql"
+    type = "postgresql"
