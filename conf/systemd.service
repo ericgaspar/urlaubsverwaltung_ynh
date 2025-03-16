@@ -1,5 +1,5 @@
 [Unit]
-Description=Small description of the service
+Description=urlaubsverwaltung
 After=network.target
 
 [Service]
@@ -8,8 +8,6 @@ User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
 ExecStart=/usr/bin/java -jar urlaubsverwaltung.jar
-StandardOutput=append:/var/log/__APP__/__APP__.log
-StandardError=inherit
 
 ### Depending on specificities of your service/app, you may need to tweak these
 ### .. but this should be a good baseline
